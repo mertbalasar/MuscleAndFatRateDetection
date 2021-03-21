@@ -1,2 +1,4 @@
 # MuscleAndFatRateDetection
-A project that makes detection of muscle and fat rate with given DICOM images. This is an image processing project, that have two algorithms into. First algorithm has been made by myself, second algorithm has been made by OpenCV.
+Proje içerisinde My Algorithm ve OpenCV Algorithm olmak üzere 2 adet proje vardır.
+
+My Algorithm, bacak MR görüntülerinde işaretlenmiş merkezi noktalardan koordinat sistemine göre 4 bölgeli tarama yaparak bacağın dış çeperlerini bulur. Bacağın dış çeperlerinin tespitinde en son tespit edilen beyaz noktalar kullanılır, bir eksende ilerlerken karşılaşılan her beyaz nokta yağ olamayacağından dolayı bu işlem yapılmaktadır. Bu çeperlere yapılan taramalarda beyaza çok yakın tonlarla karşılaşılması durumunda yağ olarak tespit edilen piksel sayılarını tutan değişkenin değeri arttırılır. Aksi takdirde siyaha yakın tonlarla karşılaşılırsa aynı şekilde kas olarak tespit edilen piksel sayılarını tutan değişkenin değeri arttırılır. Tüm görüntüler için bu işlemler tekrarlandıktan sonra 2 global değişkenin birbirine oranlanmasıyla yüzdelik dilimde kas yağ hacmi oranı sonucu çıkartılır.
